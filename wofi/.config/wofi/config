@@ -1,0 +1,10 @@
+# ~/.config/wofi/config
+show=dmenu
+allow_images=true
+insensitive=true
+hide_scroll=true
+# This hides the search bar entirely
+filter_rate=100
+# Makes it appear as a popup rather than a full-screen app
+normal_window=false
+layer=overlay

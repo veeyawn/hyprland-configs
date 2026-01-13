@@ -1,21 +1,21 @@
 #!/bin/bash
 
+# Configuration
 STYLE="$HOME/.config/wofi/style.css"
+CONFIG="$HOME/.config/wofi/config"
 
-# We use the Nerd Font icons directly in the string
-# The 'awk' part is updated to make sure we grab the right word after the icon
-op=$(echo -e "󰌾 Lock\n Shutdown\n  Reboot\n  Suspend\n󰈆  Logout" | \
-    wofi --show dmenu \
-         --style "$STYLE" \
-         --width 200 \
-         --height 210 \
-         --always_parse_args \
-         --cache-file /dev/null | awk '{print $2}')
+# Define entries with icons (Using standard Adwaita/Papirus icon names)
+# Format: img:<path/to/icon>:text:<display_name>
+entries="img:/usr/share/icons/Adwaita/symbolic/status/system-lock-screen-symbolic.svg:text:Lock\nimg:/usr/share/icons/Adwaita/symbolic/actions/system-log-out-symbolic.svg:text:Logout\nimg:/usr/share/icons/Adwaita/symbolic/actions/system-reboot-symbolic.svg:text:Reboot\nimg:/usr/share/icons/Adwaita/symbolic/status/system-shutdown-symbolic.svg:text:Shutdown"
 
-case $op in
-    Lock) hyprlock ;;
-    Shutdown) systemctl poweroff ;;
-    Reboot)   systemctl reboot ;;
-    Suspend)  systemctl suspend ;;
+selected=$(echo -e "$entries" | wofi --show dmenu --style "$STYLE" --conf "$CONFIG" --allow-images --width 300 --height 320 --cache-file /dev/null)
+
+# Extract just the text part (after :text:)
+choice=$(echo "$selected" | awk -F':text:' '{print $2}')
+
+case $choice in
+    Lock)     hyprlock ;;
     Logout)   hyprctl dispatch exit ;;
+    Reboot)   systemctl reboot ;;
+    Shutdown) systemctl poweroff ;;
 esac

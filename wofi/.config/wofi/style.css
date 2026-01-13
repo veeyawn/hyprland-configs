@@ -29,10 +29,6 @@ window {
     transition: all 0.2s ease-in-out;
 }
 
-/* Optional: Make the icon a different color than the text */
-#entry:selected #text {
-    color: #1a1a1a; /* Dark text when highlighted green */
-}
 
 /* This targets the first character (the icon) if you want it larger */
 #text {
@@ -43,4 +39,32 @@ window {
     margin-left: 15px;
     font-weight: bold;
     /* This ensures the icon and text align perfectly */
+}
+
+/* The Icon */
+#img {
+    margin-right: 20px;
+    /* This makes icons glow slightly cyan */
+    -gtk-icon-shadow: 0 0 5px #33ccff;
+}
+
+/* Selection Highlight */
+#entry:selected {
+    color: #1a1a1a; /* Dark text when highlighted green */
+    background-color: #00ff99; /* Green selection */
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+#text:selected {
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+/* This should hide the search bar in the power menu popup */
+#input {
+    all: unset;        /* Reset all default styles */
+    border: none;
+    opacity: 0;        /* Make it invisible */
+    margin: -10px;     /* Pull the entries up to hide the gap */
+    height: 0px;       /* Collapse the height */
 }
