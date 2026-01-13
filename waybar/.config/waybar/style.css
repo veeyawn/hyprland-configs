@@ -1,0 +1,50 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.8); /* Dark Transparent */
+    border-bottom: 2px solid rgba(51, 204, 255, 0.3); /* Subtle Cyan border */
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    color: #33ccff; /* Cyan for active workspace */
+    border-bottom: 2px solid #33ccff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#cpu { color: #33ccff; }    /* Cyan */
+#memory { color: #00ff99; } /* Green */
+#disk { color: #33ccff; }   /* Cyan */
+#clock { color: #00ff99; }  /* Green */
+
+#cpu, #memory, #disk, #clock, #tray {
+    padding: 0 10px;
+    margin: 0 4px;
+}
+
+#custom-power {
+    color: #ff5555; /* A soft red for the power icon */
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+#custom-power:hover {
+    color: #00ff99; /* Turns Green on hover to match your theme */
+    text-shadow: 0 0 5px #00ff99;
+}

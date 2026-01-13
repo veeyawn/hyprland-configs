@@ -1,0 +1,75 @@
+# Main appearance settings
+[appearance]
+style = "Islands"      # Options: Islands, Solid, Gradient
+opacity = 0.9          # Matches the 90% opacity we used for your windows
+font_size = 14
+font_family = "JetBrainsMono Nerd Font"
+
+[colors]
+# Matching your Hyprland Cyan and Green
+accent = "#33ccff"
+success = "#00ff99"
+background = "#1a1a1a"
+foreground = "#ffffff"
+
+# Configure the Modules (Items in your bar)
+[modules]
+# Show your 10 workspaces
+workspaces = { enabled = true, show_all = false }
+
+#Show system info and disk
+#system_info = { enabled = true, interval = 2 }
+#disk = { enabled = true, path = "/", interval = 60, show_all_mounts = true }
+#modules_right = ["system_info", "disk", "clock"]
+
+[system_info]
+# Customize what shows up in the system info module
+#enabled = true
+#interval = 2
+show_cpu = true
+show_temp = true
+show_mem = true
+cpu_format = "CPU: {usage}%"
+mem_format = "RAM: {used}/{total}GB"
+cpu_color = "#33ccff"
+mem_color = "00ff99"
+
+[disk]
+#enabled = true
+# Track your main drive
+path = "/"
+format = "HDD: {free} free"
+# Threshold to turn the text 'success' color (green) or warning (red)
+low_threshold = 10.0 # 10GB
+#interval = 60
+
+# Active window title
+window_title = { enabled = true, max_length = 40 }
+
+# System monitor (CPU/RAM)
+cpu = { enabled = true, interval = 2 }
+memory = { enabled = true, interval = 5 }
+
+# Clock and Date
+clock = { format = "%H:%M - %a %d" }
+
+# Media Player integration
+media_player = { enabled = true, max_length = 30 }
+
+[audio]
+enabled = true
+# Clicking the volume icon will open the audio mixer panel
+
+[power_menu]
+enabled = true
+# Provides: Shutdown, Reboot, Suspend, Logout
+
+#[[bar]]
+#monitor = "DP-4" # Your primary monitor name
+#modules_left = ["workspaces", "window_title"]
+#modules_right = ["system_info", "disk", "clock", "power_menu"]
+
+#[[bar]]
+#monitor = "HDMI-A-1" # Your secondary monitor name
+#modules_left = ["workspaces"]
+#modules_right = ["clock"]

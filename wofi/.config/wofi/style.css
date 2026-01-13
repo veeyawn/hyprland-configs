@@ -1,0 +1,46 @@
+/* ~/.config/wofi/style.css */
+window {
+    margin: 0px;
+    border: 2px solid #33ccff; /* Cyan Border */
+    background-color: rgba(26, 26, 26, 0.8); /* 80% opacity */
+    border-radius: 12px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+}
+
+#input {
+    display: none; /* Hide the search bar for a cleaner power menu */
+}
+
+#entry {
+    padding: 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Optional: Make the icon a different color than the text */
+#entry:selected #text {
+    color: #1a1a1a; /* Dark text when highlighted green */
+}
+
+/* This targets the first character (the icon) if you want it larger */
+#text {
+    font-size: 18px;
+}
+
+#text {
+    margin-left: 15px;
+    font-weight: bold;
+    /* This ensures the icon and text align perfectly */
+}

@@ -1,0 +1,29 @@
+# Main Modules List
+#modules_right = ["system_info", "disk", "clock"]
+
+[system_info]
+enabled = true
+interval = 1
+# Try removing the format strings temporarily to see if defaults work
+# If defaults show up, we know it was a formatting syntax error
+show_cpu = true
+show_mem = true
+show_temp = true
+# Use these simple labels first to test
+cpu_format = "{usage}%"
+mem_format = "{used}G"
+
+#[system_info]
+#enabled = true
+#interval = 2
+#show_cpu = true
+#show_mem = true
+# Use these exact keys for Arch compatibility
+#cpu_format = "CPU: {usage}%"
+#mem_format = "RAM: {used}GB"
+
+#[disk]
+#enabled = true
+#path = "/"
+#format = "Disk: {free} free"
+

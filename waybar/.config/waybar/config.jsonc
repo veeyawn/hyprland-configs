@@ -1,0 +1,47 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "disk", "clock", "custom/power", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true
+    },
+
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "  {used}GB",
+        "interval": 5,
+        "swap-icon-label": false,  // Add this line to clear the warning
+        "states": {
+           "warning": 70,
+           "critical": 90
+        }
+    },
+
+    "disk": {
+        "format": "󰋊 {free} free",
+        "path": "/",
+        "interval": 60
+    },
+
+    "clock": {
+        "format": "{:%H:%M - %a %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "custom/power": {
+        "format": "⏻ ",
+        "on-click": "~/.config/waybar/power_menu.sh",
+        "tooltip": false
+    }
+}

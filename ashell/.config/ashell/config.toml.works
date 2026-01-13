@@ -1,0 +1,34 @@
+[system_info]
+indicators = [ "Cpu", "Memory", "Temperature", "IpAddress", { Disk = "/home" } ]
+
+[system_info.cpu]
+warn_threshold = 60
+alert_threshold = 80
+
+[system_info.memory]
+warn_threshold = 70
+alert_threshold = 85
+
+[system_info.disk]
+warn_threshold = 80
+alert_threshold = 90
+
+[system_info.temperature]
+warn_threshold = 60
+alert_threshold = 80
+sensor = "acpitz temp1"
+
+[settings]
+lock_cmd = "hyprlock &"
+remove_airplane_btn = true
+shutdown_cmd = "shutdown now"
+suspend_cmd = "systemctl suspend"
+hibernate_cmd = "systemctl hibernate"
+reboot_cmd = "systemctl reboot"
+logout_cmd = "loginctl kill-user $(whoami)"
+
+[[settings.CustomButton]]
+name = "Terminal"
+icon = ""
+command = "ghostty"
+tooltip = "Open Terminal"
