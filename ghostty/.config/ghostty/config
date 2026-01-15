@@ -47,3 +47,30 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
+
+# Colors
+palette = 0=#111111
+palette = 1=#ff0000
+palette = 2=#00ff99
+palette = 3=#ffcc00
+palette = 4=#0055ff
+palette = 5=#cc00ff
+palette = 6=#33ccff
+palette = 7=#ffffff
+
+# Spider-Man Theme Specifics
+background = #111111
+foreground = #ffffff
+cursor-color = #ff0000
+selection-background = #0055ff
+selection-foreground = #ffffff
+
+# Visuals
+window-padding-x = 10
+window-padding-y = 10
+window-background-opacity = 0.85
+window-blur-radius = 20
+
+# Fonts
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12

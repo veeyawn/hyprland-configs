@@ -1,8 +1,8 @@
 /* ~/.config/wofi/style.css */
 window {
     margin: 0px;
-    border: 2px solid #33ccff; /* Cyan Border */
-    background-color: rgba(26, 26, 26, 0.8); /* 80% opacity */
+    border: 2px solid #ff0000;
+    background-color: #111111;
     border-radius: 12px;
     font-family: "JetBrainsMono Nerd Font";
     font-size: 16px;
@@ -29,7 +29,6 @@ window {
     transition: all 0.2s ease-in-out;
 }
 
-
 /* This targets the first character (the icon) if you want it larger */
 #text {
     font-size: 18px;
@@ -50,8 +49,8 @@ window {
 
 /* Selection Highlight */
 #entry:selected {
-    color: #1a1a1a; /* Dark text when highlighted green */
-    background-color: #00ff99; /* Green selection */
+    color: #ffffff;
+    background-color: #0055ff; /* Blue highlight */
     box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
@@ -62,9 +61,9 @@ window {
 
 /* This should hide the search bar in the power menu popup */
 #input {
-    all: unset;        /* Reset all default styles */
+    all: unset; /* Reset all default styles */
     border: none;
-    opacity: 0;        /* Make it invisible */
-    margin: -10px;     /* Pull the entries up to hide the gap */
-    height: 0px;       /* Collapse the height */
+    opacity: 0; /* Make it invisible */
+    margin: -10px; /* Pull the entries up to hide the gap */
+    height: 0px; /* Collapse the height */
 }

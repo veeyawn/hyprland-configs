@@ -1,14 +1,14 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family:
+        "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     border: none;
     border-radius: 0;
 }
 
 window#waybar {
-    background-color: rgba(26, 27, 38, 0.8); /* Dark Transparent */
-    border-bottom: 2px solid rgba(51, 204, 255, 0.3); /* Subtle Cyan border */
-    color: #ffffff;
+    background-color: rgba(17, 17, 17, 0.85); /* Web-Black */
+    border-bottom: 3px solid #ff0000; /* Red accent line */
 }
 
 #workspaces button {
@@ -17,26 +17,38 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #33ccff; /* Cyan for active workspace */
-    border-bottom: 2px solid #33ccff;
+    color: #ff0000;
+    border-bottom: 3px solid #0055ff;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
 }
 
-#cpu { color: #33ccff; }    /* Cyan */
-#memory { color: #00ff99; } /* Green */
-#disk { color: #33ccff; }   /* Cyan */
-#clock { color: #00ff99; }  /* Green */
+#cpu {
+    color: #ff0000;
+} /* Red */
+#memory {
+    color: #0055ff;
+} /* Blue */
+#disk {
+    color: #ff0000;
+} /* Red */
+#clock {
+    color: #0055ff;
+} /* Blue */
 
-#cpu, #memory, #disk, #clock, #tray {
+#cpu,
+#memory,
+#disk,
+#clock,
+#tray {
     padding: 0 10px;
     margin: 0 4px;
 }
 
 #custom-power {
-    color: #ff5555; /* A soft red for the power icon */
+    color: #ff0000;
     font-size: 18px;
     padding-left: 10px;
     padding-right: 5px;
@@ -45,6 +57,6 @@ window#waybar {
 }
 
 #custom-power:hover {
-    color: #00ff99; /* Turns Green on hover to match your theme */
+    color: #0055ff; /* Turns Green on hover to match your theme */
     text-shadow: 0 0 5px #00ff99;
 }
